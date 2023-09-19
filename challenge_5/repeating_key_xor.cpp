@@ -14,7 +14,7 @@ int main()
 
     for (char c : output)
     {
-        printf("%02x", static_cast<unsigned char>(c));
+        printf("%02x", c);
     }
     std::cout << std::endl;
 }
