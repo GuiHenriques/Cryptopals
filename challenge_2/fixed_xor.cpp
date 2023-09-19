@@ -8,9 +8,9 @@ int main() {
     
     int buffer_length = buffer1.length(); // Buffers length
 
-    for (int i = 0; i < buffer_length; i++) { // For each character in buffer
-        int bit1 = std::stoi(buffer1.substr(i, 1), 0, 16); // convert char to int
-        int bit2 = std::stoi(buffer2.substr(i, 1), 0, 16); //convert char to int
+    for (int i = 0; i < buffer_length; i+=2) { // For each character in buffer
+        int bit1 = std::stoi(buffer1.substr(i, 2), 0, 16); // convert char to int
+        int bit2 = std::stoi(buffer2.substr(i, 2), 0, 16); //convert char to int
 
         int xored_bit = bit1 ^ bit2; // xor operation
 
